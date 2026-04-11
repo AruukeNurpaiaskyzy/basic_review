@@ -41,9 +41,9 @@
 # print(len(str(big_integer)))
 # my_string = "Hello, world"
 # print("Hello" in my_string)
-my_string = input("Enter a number: ")
-if my_string.isdigit():
-    my_integer = int(my_string)
-    print(my_integer)
-else:
-    print(f'{my_string} is not a number')
+# my_string = input("Enter a number: ")
+# if my_string.isdigit():
+#     my_integer = int(my_string)
+#     print(my_integer)
+# else:
+#     print(f'{my_string} is not a number')
