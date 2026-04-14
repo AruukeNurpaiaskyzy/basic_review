@@ -11,18 +11,18 @@
 # print(my_lists==my_lists2)
 
 
-DEFAULT_LEVEL_EXPERIENCE = 200
+# DEFAULT_LEVEL_EXPERIENCE = 200
 
 
-def is_leveled_up (*, current_experience: int, gained_experience: int) -> bool:
- total_experience = current_experience+gained_experience
- level_up = False
- if total_experience>=DEFAULT_LEVEL_EXPERIENCE:
-    level_up = True
-    return level_up
+# def is_leveled_up (*, current_experience: int, gained_experience: int) -> bool:
+#  total_experience = current_experience+gained_experience
+#  level_up = False
+#  if total_experience>=DEFAULT_LEVEL_EXPERIENCE:
+#     level_up = True
+#     return level_up
 
-result = is_leveled_up(current_experience=150, gained_experience=60)
-print(result)  
+# result = is_leveled_up(current_experience=150, gained_experience=60)
+# print(result)  
 
 
 
@@ -33,7 +33,12 @@ print(result)
 #     total_experience = current_experience + gained_experience
 #     return total_experience >= DEFAULT_LEVEL_EXPERIENCE
 
-
+import requests
+url = 'https://api.binance.com/api/v3/ticker/price'
+response = requests.get(url, params ={'symbol':'BTCUSDT'})
+price_object = response.json() 
+price = float(price_object['price'])
+print(price)
 
 
 
