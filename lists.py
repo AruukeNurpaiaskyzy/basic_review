@@ -33,17 +33,21 @@
 #     total_experience = current_experience + gained_experience
 #     return total_experience >= DEFAULT_LEVEL_EXPERIENCE
 
-import requests
-url = 'https://api.binance.com/api/v3/ticker/price'
-response = requests.get(url, params ={'symbol':'BTCUSDT'})
-price_object = response.json() 
-price = float(price_object['price'])
-print(price)
+# import requests
+# url = 'https://api.binance.com/api/v3/ticker/price'
+# response = requests.get(url, params ={'symbol':'BTCUSDT'})
+# price_object = response.json() 
+# price = float(price_object['price'])
+# print(price)
 
 
 
+# сложение = lambda x, y: x + y
+# print(сложение(5, 6))
 
 
+# def multiply(x, y):
+#     return x * y
 
-
+# print(multiply(5, 6))
 
