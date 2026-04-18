@@ -40,21 +40,49 @@
 #     ork2.attack()
 
 
-class Dog:
-    def __init__ (self, name, age):
-        self.name = name 
-        self.age = age
+# class Dog:
+#     def __init__ (self, name, age):
+#         self.name = name 
+#         self.age = age
     
-    def bark(self):
-        print(f"{self.name} says gaf!")
+#     def bark(self):
+#         print(f"{self.name} says gaf!")
     
-    def birthday(self):
-        self.age += 1
-        print(f"{self.name} теперь {self.age} года")
+#     def birthday(self):
+#         self.age += 1
+#         print(f"{self.name} теперь {self.age} года")
 
-buddy = Dog("Baddy", 3)
-maxim =Dog("Maxim", 2)
+# buddy = Dog("Baddy", 3)
+# maxim =Dog("Maxim", 2)
 
-buddy.bark()        
-maxim.birthday()    
-print(maxim.age)  
+# buddy.bark()        
+# maxim.birthday()    
+# print(maxim.age)  
+
+
+
+
+class Student:
+    def __init__(self, name):
+        self.name = name
+        self.grades = []
+    def add_grade(self, grade):
+        if 1 <= grade <= 5:
+            self.grades.append(grade)
+        else:
+            print("оценка должно быть от 1 до 5")
+
+    def average(self):
+        if not self.grades:
+            return 0
+        return sum(self.grades) / len(self.grades)
+
+    def info(self):
+        avg = self.average()
+        print(f"{self.name}, средний балл: {avg:.2f}")
+
+alice = Student('Alice')
+alice.add_grade(5)
+alice.add_grade(5)
+alice.add_grade(5)
+alice.info()
