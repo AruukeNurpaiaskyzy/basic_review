@@ -62,27 +62,52 @@
 
 
 
-class Student:
-    def __init__(self, name):
-        self.name = name
-        self.grades = []
-    def add_grade(self, grade):
-        if 1 <= grade <= 5:
-            self.grades.append(grade)
-        else:
-            print("оценка должно быть от 1 до 5")
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+#         self.grades = []
+#     def add_grade(self, grade):
+#         if 1 <= grade <= 5:
+#             self.grades.append(grade)
+#         else:
+#             print("оценка должно быть от 1 до 5")
 
-    def average(self):
-        if not self.grades:
-            return 0
-        return sum(self.grades) / len(self.grades)
+#     def average(self):
+#         if not self.grades:
+#             return 0
+#         return sum(self.grades) / len(self.grades)
 
-    def info(self):
-        avg = self.average()
-        print(f"{self.name}, средний балл: {avg:.2f}")
+#     def info(self):
+#         avg = self.average()
+#         print(f"{self.name}, средний балл: {avg:.2f}")
 
-alice = Student('Alice')
-alice.add_grade(5)
-alice.add_grade(5)
-alice.add_grade(5)
-alice.info()
+# alice = Student('Alice')
+# alice.add_grade(5)
+# alice.add_grade(5)
+# alice.add_grade(5)
+# alice.info()
+
+
+class BankAccount:
+    def __init__(self, owner, balance = 0):
+        self.owner = owner
+        self.show_balance = self.show_balance   
+        
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            print()
+
+        pass
+
+    def withdraw(self, amount):
+        pass
+
+    def show_balance(self):
+        pass
+
+account = BankAccount("Иван", 100)
+account.deposit(50)
+account.withdraw(30)
+account.show_balance()
