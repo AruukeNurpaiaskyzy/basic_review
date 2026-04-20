@@ -97,7 +97,9 @@ class BankAccount:
     def deposit(self, amount):
         if amount > 0:
             self.balance += amount
-            print()
+            print(f"внесено {amount} руб текущий баланс: {self.balance} ")
+        else:
+            print("сумма должно быть положительной")
 
         pass
 
