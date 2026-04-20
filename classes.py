@@ -88,28 +88,43 @@
 # alice.info()
 
 
-class BankAccount:
-    def __init__(self, owner, balance = 0):
-        self.owner = owner
-        self.show_balance = self.show_balance   
+# class BankAccount:
+#     def __init__(self, owner, balance = 0):
+#         self.owner = owner
+#         self.show_balance = self.show_balance   
         
 
-    def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-            print(f"внесено {amount} руб текущий баланс: {self.balance} ")
-        else:
-            print("сумма должно быть положительной")
+#     def deposit(self, amount):
+#         if amount > 0:
+#             self.balance += amount
+#             print(f"внесено {amount} руб текущий баланс: {self.balance} ")
+#         else:
+#             print("сумма должно быть положительной")
 
-        pass
+#         pass
 
-    def withdraw(self, amount):
-        pass
+#     def withdraw(self, amount):
+#         pass
 
-    def show_balance(self):
-        pass
+#     def show_balance(self):
+#         pass
 
-account = BankAccount("Иван", 100)
-account.deposit(50)
-account.withdraw(30)
-account.show_balance()
+# account = BankAccount("Иван", 100)
+# account.deposit(50)
+# account.withdraw(30)
+# account.show_balance()
+
+
+class CreditCard:
+    def __init__(self, customer, bank, acnt, limit):
+        self.customer = customer
+        self.bank = bank
+        self.acnt = acnt
+        self.limit = limit
+        self.balance = 0
+    def raiseBalance(self):
+        return self.balance + 3000
+
+iuhnik = CreditCard('aruu', 'sber', '67787', 0)
+print(iuhnik.raiseBalance())
+    
